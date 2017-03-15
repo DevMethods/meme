@@ -5,21 +5,15 @@ var MEME_SETTINGS = {
 
   // Universal font family for texts:
   // Note that you'll need to included quoted font names as you would in CSS, ie: '"Knockout 28 B"'.
-  fontFamily: 'Oswald',
+  fontFamily: 'Roboto',
   // Font family options: set to empty array to disable font selector.
   // These options may also be formatted as {text:'Knockout', value:'"Knockout 28 B"'}.
   fontFamilyOpts: [{
-    text: 'Oswald - statesman.com',
-    value: 'Oswald'
-  }, {
-    text: 'Georgia - politifact.com',
-    value: 'Georgia'
-  }, {
-    text: 'Ubuntu - hookem.com',
-    value: 'Ubuntu'
-  }, {
-    text: 'Roboto - 512tech.com',
+    text: 'Roboto Font',
     value: 'Roboto'
+  }, {
+    text: 'Roboto Condensed Font',
+    value: 'Roboto Condensed'
   }],
 
   // Font size of main headline:
@@ -32,7 +26,7 @@ var MEME_SETTINGS = {
   ],
   // Font color options
   fontColor: '#fff',
-  fontColorOpts: ['#fff', '#333', '#000'],
+  fontColorOpts: ['#fff', '#333', '#000', '#C52D27'],
 
   headlineText: 'Write your own headline', // Default headline text.
   height: 378, // Canvas rendering height.
@@ -43,8 +37,8 @@ var MEME_SETTINGS = {
   // Image overlay color, or blank ('') for no overlay:
   overlayColor: '',
   // Overlay color options: set to empty array to disable overlay options selector.
-  overlayColorOpts: ['#000', '#777', '#1368b2', '#98012e', '#62b246', '#1955a5', '#BF5700', '#dd2228'],
-  paddingRatio: 0.05, // Percentage of canvas width to use as edge padding.
+  overlayColorOpts: ['#000', '#fff', '#777', '#1368b2', '#98012e', '#62b246', '#1955a5', '#ff6c03', '#dd2228', '#C52D27'],
+  paddingRatio: 0.025, // Percentage of canvas width to use as edge padding.
 
   // Size options: these are some sane defaults for the three social networks.
   sizeOpts: [{
@@ -76,30 +70,16 @@ var MEME_SETTINGS = {
   watermarkMaxWidthRatio: 0.25, // Maximum allowed width of watermark (percentage of total canvas width).
 
   // Path to the watermark image source, or blank for no watermark:
-  watermarkSrc: (localStorage && localStorage.getItem('meme_watermark')) || 'source/images/statesman.png',
+  watermarkSrc: (localStorage && localStorage.getItem('meme_watermark')) || 'dist/images/mundo-logo-white-full.png',
 
   // Watermark image options: set to empty array to disable watermark picker.
   // NOTE: only populate the "data" attributes with base64 data when concerned about Cross-Origin requests...
   // Otherwise, just leave "data" attributes blank and allow images to load from your server.
   watermarkOpts: [
-    {text: 'Statesman', value: 'source/images/statesman.png', data: ''},
-    {text: 'MyStatesman', value: 'source/images/mystatesman.png', data: ''},
-    {text: 'Hookem.com (white)', value: 'source/images/hookem.png', data: ''},
-    {text: 'Hookem.com (color)', value: 'source/images/hookem-color.png', data: ''},
-    {text: 'Austin360', value: 'source/images/logo-austin360-white.png', data: ''},
-    {text: 'Austin360 app', value: 'source/images/austin360app.png', data: ''},
-    {text: '512tech (white)', value: 'source/images/512tech-white.png', data: ''},
-    {text: '512tech (color)', value: 'source/images/512tech.png', data: ''},
-    {text: 'Ahora Si', value: 'source/images/ahorasi.png', data: ''},
-    {text: 'PolitiFact Texas (white)', value: 'source/images/politifact-white.png', data: ''},
-    {text: 'PolitiFact Texas (color)', value: 'source/images/politifact.png', data: ''},
-    {text: 'PolitiFact Texas (truth)', value: 'source/images/politifact-truth-o-meter.png', data: ''},
-    {text: 'Bastrop Advertiser', value: 'source/images/bastrop.png', data: ''},
-    {text: 'Lake Travis View', value: 'source/images/laketravis.png', data: ''},
-    {text: 'Pflugerville Pflag', value: 'source/images/pflugerville.png', data: ''},
-    {text: 'Round Rock Leader', value: 'source/images/roundrock.png', data: ''},
-    {text: 'Smithville Times', value: 'source/images/smithville.png', data: ''},
-    {text: 'Westlake Picayune', value: 'source/images/westlake.png', data: ''}
+    {text: 'Mundo Red', value: 'dist/images/mundo-logo-red-full.png', data: ''},
+    {text: 'Mundo White', value: 'dist/images/mundo-logo-white-full.png', data: ''},
+    {text: 'Mundo Square', value: 'dist/images/mundo-logo-square.png', data: ''},
+  
   ],
 
   width: 755 // Canvas rendering width.

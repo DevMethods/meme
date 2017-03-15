@@ -10,6 +10,16 @@ module.exports = function(grunt) {
       js: ["dist/*.js", "dist/*.js.map"]
     },
 
+    copy: {
+      images: {
+        expand: true,
+        flatten: true,
+        filter: 'isFile',
+        src: 'source/images/*',
+        dest: 'dist/images',
+      },
+    },
+
     // Use Uglify to bundle up a pym file for the home page
     uglify: {
       options: {
@@ -63,7 +73,7 @@ module.exports = function(grunt) {
       }
     },
 
-  // Creating a local server
+    // Creating a local server
     connect: {
       server: {
         options: {
@@ -86,11 +96,12 @@ module.exports = function(grunt) {
   // Load the task plugins
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-concurrent');
 
-  grunt.registerTask('default', ['clean', 'sass', 'uglify', 'concurrent']);
+  grunt.registerTask('default', ['clean', 'sass', 'uglify', 'copy', 'concurrent']);
 
 };
